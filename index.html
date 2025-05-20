@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulir Pendaftaran SD</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pendaftaran Sekolah Dasar</h1>
+    <p>Silakan isi formulir di bawah ini dengan data yang benar dan lengkap.</p>
+    <form id="registrationForm">
+      <label for="nama">Nama Lengkap:</label>
+      <input type="text" id="nama" name="nama" required />
+
+      <label for="tanggal">Tanggal Lahir:</label>
+      <input type="date" id="tanggal" name="tanggal" required />
+
+      <label for="gender">Jenis Kelamin:</label>
+      <select id="gender" name="gender" required>
+        <option value="">-- Pilih --</option>
+        <option value="Laki-laki">Laki-laki</option>
+        <option value="Perempuan">Perempuan</option>
+      </select>
+
+      <label for="alamat">Alamat Rumah:</label>
+      <textarea id="alamat" name="alamat" rows="3" required></textarea>
+
+      <label for="wali">Nama Orang Tua/Wali:</label>
+      <input type="text" id="wali" name="wali" required />
+
+      <label for="telepon">No. Telepon Orang Tua:</label>
+      <input type="tel" id="telepon" name="telepon" pattern="[0-9]{10,13}" required />
+
+      <button type="submit">Daftar Sekarang</button>
+    </form>
+    <div id="hasil"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
